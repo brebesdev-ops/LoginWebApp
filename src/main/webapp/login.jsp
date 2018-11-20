@@ -10,7 +10,7 @@
     Connection con = DriverManager.getConnection(dbconnection, dbuser, dbpassword);
     Statement st = con.createStatement();
     ResultSet rs;
-    rs = st.executeQuery("select * from user where userName='" + userName + "' and password='" +password + "'");
+    rs = st.executeQuery("select * from USER where userName='" + userName + "' and password='" +password + "'");
     if (rs.next()) {
         session.setAttribute("userName", userName);
         response.sendRedirect("success.jsp");
