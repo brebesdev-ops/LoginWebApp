@@ -6,7 +6,7 @@
     String lastName = request.getParameter("lastName");
     String email = request.getParameter("email");
     String dbdriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    String dbconnection = "jdbc:sqlserver://sqlserverdb.cvlvbu3tfq9g.ap-south-1.rds.amazonaws.com:1433/sqlserverdb";
+    String dbconnection = "jdbc:sqlserver://sqlserverdb.cvlvbu3tfq9g.ap-south-1.rds.amazonaws.com:1433;databaseName=sqlserverdb";
     String dbuser = "sbikkasani";
     String dbpassword = "sbikkasani";
     Class.forName(dbdriver);
