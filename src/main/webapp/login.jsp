@@ -2,10 +2,10 @@
 <%
     String userName = request.getParameter("userName");
     String password = request.getParameter("password");
-    String dbdriver = "dbdriver";
-    String dbconnection = "dbconnection";
-    String dbuser = "dbuser";
-    String dbpassword = "dbpassword";
+    String dbdriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    String dbconnection = "jdbc:sqlserver://sqlserverdb.cvlvbu3tfq9g.ap-south-1.rds.amazonaws.com:1433;databaseName=sqlserverdb";
+    String dbuser = "sbikkasani";
+    String dbpassword = "sbikkasani";
     Class.forName(dbdriver);
     Connection con = DriverManager.getConnection(dbconnection, dbuser, dbpassword);
     Statement st = con.createStatement();
