@@ -3,7 +3,7 @@
     String userName = request.getParameter("userName");
     String password = request.getParameter("password");
     String dbdriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
-    String dbconnection = "jdbc:sqlserver://sqlserverdb.cvlvbu3tfq9g.ap-south-1.rds.amazonaws.com:1433;databaseName=sqlserverdb";
+    String dbconnection = "jdbc:sqlserver://sqlserverdb.cvlvbu3tfq9g.ap-south-1.rds.amazonaws.com:1433/sqlserverdb";
     String dbuser = "sbikkasani";
     String dbpassword = "sbikkasani";
     Class.forName(dbdriver);
