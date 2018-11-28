@@ -5,14 +5,14 @@
     String firstName = request.getParameter("firstName");
     String lastName = request.getParameter("lastName");
     String email = request.getParameter("email");
-    String dbdriver = "dbdriver";
-    String dbconnection = "dbconnection";
-    String dbuser = "dbuser";
-    String dbpassword = "dbpassword";
+    String dbdriver = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
+    String dbconnection = "jdbc:sqlserver://sqlserverdb.cvlvbu3tfq9g.ap-south-1.rds.amazonaws.com:1433;databaseName=sqlserverdb";
+    String dbuser = "sbikkasani";
+    String dbpassword = "sbikkasani";
     Class.forName(dbdriver);
     Connection con = DriverManager.getConnection(dbconnection, dbuser, dbpassword);
     Statement st = con.createStatement();
-    int i = st.executeUpdate("insert into USER(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','"
+    int i = st.executeUpdate("insert into Users(first_name, last_name, email, username, password, regdate) values ('" + firstName + "','"
     + lastName + "','" + email + "','" + userName + "','" + password + "', CURDATE())");
     if (i > 0) {
         response.sendRedirect("welcome.jsp");
