@@ -1,2 +1,2 @@
 # LoginWebApp
-Sample JAVA application with Mysql DB.
+Sample JAVA application with SQL server DB.
